@@ -1,95 +1,19 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: X  
 Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Nama: Resta Ariyandani  
+NIM: 230202779 
+Kelas: 5IKRA 
 
----
+## 1. Dasar Teori
+Kpritrogafi klasik berkembang masa lampau dengan metode yang sangat sederhana yang berguna untuk menyembunyikan pesan. Contonya metode awal yaitu Caesar Cipher, yang digunakan oleh Julius Caesar yang di gunakan untuk mengirim pesan rahasia dengan cara menggeser huruf dalam bentuk alfabet dengan langkah tertentu. Vigenere ciper sendiri memperkenalkan kinci kata sandi yang lebih kompleks dengan teknik subtitusi polialfabetik, dan lebih meningkatkan keamanan dibandingkan metode sebelumnya.
+Perkembangan kriptografi modern yang dimulai dengan munculnya algoritma yang lebih kompleks dan aman. Dua algoritma penting dalam periode ini adalah RSA dan AES. RSA sendiri merupakan algoritma asimetrisyang menggunakan pasangan kuci publik dan privat, sangat memungkinkan komunikasinya lebih aman dan tanda tangan digital, ini sangat penting untuk transaksi elektronik dan internet.
+Selanjutnya yaitu Evolusi kriptografi kontemporer ini menghadirkan teknolohi yang baru yang menggabungkan konsep keamanan dan transparansi, seprti blockchain dan cryptocurrency, blockchain ialah sistem yang mencatat tansaksi dalam rantai blok yang terenkripsi, lebih sulis diubah dari pada yang sebelumnya tanpa persetujuan banyak pihak. Teknologi ini menjadim dasar bagi crytocurrency seperti Bitcoin.
 
-## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+## 2. Quis
+1. Claude Shannon
+2. - RSA (Rivest-Shamir-Adleman)
+   - ECC (Elliptic Curve Cryptography)
+   - Diffie-Hellman
+   - DSA (Digital Signature Algorithm
 
----
-
-## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
-
----
-
-## 3. Alat dan Bahan
-(- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
-
----
-
-## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
-
----
-
-## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
-
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
-
----
-
-## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
-
----
-
-## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
-
-## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
-
----
-
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
-
----
-
-## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
-
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
-```
