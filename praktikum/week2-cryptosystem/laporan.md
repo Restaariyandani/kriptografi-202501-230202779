@@ -60,22 +60,7 @@ Contoh format:
    keamanan tinggi dengan ukuran kunci yang lebih kecil, sehingga lebih efisien
    untuk perangkat dengan sumber daya terbatas.
 
-## 6. Kesimpulan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
-
----
-
-## 7. Pertanyaan Diskusi
+## 6. Pertanyaan Diskusi
 1. Pembangkitan kunci berfungsi menghasilkan kunci rahasia yang unik, enkripsi
    mengubah pesan asli (plaintext) menjadi bentuk tersandi (ciphertext), dan
    dekripsi mengembalikan ciphertext menjadi plaintext menggunakan kunci yang
