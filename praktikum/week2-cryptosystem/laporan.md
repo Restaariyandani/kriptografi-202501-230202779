@@ -46,16 +46,7 @@ if __name__ == "__main__":
     print("Ciphertext:", enc)
     print("Decrypted :", dec)
 
-## 4. Hasil dan Pembahasan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
-
----
-
-## 5. Klasifikasi Simetris & Asimetris
+## 4. Klasifikasi Simetris & Asimetris
 1. kriptografi simetris, proses enkripsi dan dekripsi dilakukan menggunakan satu
    kunci yang sama. Dengan demikian, baik pengirim maupun penerima pesan harus
    memiliki kunci yang identik dan dijaga kerahasiaannya. Keunggulan utama dari
@@ -86,7 +77,7 @@ Contoh format:
    keamanan tinggi dengan ukuran kunci yang lebih kecil, sehingga lebih efisien
    untuk perangkat dengan sumber daya terbatas.
 
-## 6. Pertanyaan Diskusi
+## 5. Pertanyaan Diskusi
 1. Pembangkitan kunci berfungsi menghasilkan kunci rahasia yang unik, enkripsi
    mengubah pesan asli (plaintext) menjadi bentuk tersandi (ciphertext), dan
    dekripsi mengembalikan ciphertext menjadi plaintext menggunakan kunci yang
