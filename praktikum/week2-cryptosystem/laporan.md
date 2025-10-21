@@ -1,24 +1,18 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 2 
+Topik: Sistem Kripto 
+Nama: Resta Ariyandani  
+NIM: 230202779  
+Kelas:5 IKRA  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
-
----
+Mengidentifikasi komponen dasar kriptosistem (plaintext, ciphertext, kunci, algoritma). Menggambarkan proses enkripsi dan dekripsi sederhana. Mengklasifikasikan jenis kriptosistem (simetris dan asimetris).
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
-
----
-
-## 3. Alat dan Bahan
+Kriptosistem merupakan suatu sistem dalam kriptografi yang terdiri dari sekumpulan algoritma yang berfungsi untuk memberikan layanan keamanan, seperti menjaga kerahasiaan data melalui proses enkripsi dan dekripsi pesan. Secara umum, kriptosistem memiliki tiga komponen utama, yaitu algoritma untuk pembangkitan kunci, proses enkripsi, dan proses dekripsi. Tingkat keamanan sistem ini sangat ditentukan oleh seberapa aman kunci yang digunakan.
+## 3. Kode Sumber
 (- Python 3.x  
 - Visual Studio Code / editor lain  
 - Git dan akun GitHub  
@@ -26,7 +20,7 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 
 ---
 
-## 4. Langkah Percobaan
+## 4. Hasil dan Pembahasan
 (Tuliskan langkah yang dilakukan sesuai instruksi.  
 Contoh format:
 1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
@@ -35,20 +29,38 @@ Contoh format:
 
 ---
 
-## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+## 5. Klasifikasi Simetris & Asimetris
+1. kriptografi simetris, proses enkripsi dan dekripsi dilakukan menggunakan satu
+   kunci yang sama. Dengan demikian, baik pengirim maupun penerima pesan harus
+   memiliki kunci yang identik dan dijaga kerahasiaannya. Keunggulan utama dari
+   metode ini adalah kecepatannya, karena algoritma yang digunakan relatif
+   sederhana dan efisien dalam mengamankan data berukuran besar. Meski demikian,
+   terdapat kelemahan dalam pendistribusian kunci, sebab kunci harus dikirim
+   melalui jalur komunikasi yang aman. Apabila kunci tersebut bocor atau
+   diketahui pihak lain, maka keamanan seluruh sistem dapat terancam. Beberapa
+   algoritma yang menerapkan metode ini antara lain DES (Data Encryption
+   Standard) dan AES (Advanced Encryption Standard).
+   Contoh : a. AES (Advanced Encryption Standard): algoritma enkripsi yang sangat
+   populer dan digunakan secara luas karena tingkat keamanannya tinggi serta
+   performanya cepat. b. DES (Data Encryption Standard): algoritma yang
+   dikembangkan oleh IBM pada tahun 1970-an, namun kini dianggap kurang aman
+   terhadap serangan modern karena panjang kuncinya yang pendek.
+3. Kriptografi asimetris memnafaatkan uda kunci yang berbeda namun saling
+   terkait,yaitu kunci publik dan kunci privat. Kunci publik yang berfungsi untuk
+   melakukan proses secara terbuka, sedangkan kunci privat digunakan untuk
+   deskripsi dan harus dijaga kerahasiaannya oleh pemiliknya. Keunggulan utama
+   dari kriptografi asimetris adalah tingkat keamanannya yang lebih tinggi dalam
+   pertukaran kunci, karena tidak ada keharusan mengirimkan kunci rahasia melalui
+   saluran komunikasi. Selain itu, sistem ini juga mendukung fitur tanda tangan
+   digital dan autentikasi pengguna. Namun, proses enkripsi dan dekripsinya lebih
+   lambat dibandingkan metode simetris karena algoritmanya lebih kompleks.
+   Contoh : a. RSA (Rivest–Shamir–Adleman): algoritma yang paling banyak
+   digunakan untuk keamanan data dan komunikasi digital karena keandalannya. b.
+   ECC (Elliptic Curve Cryptography): algoritma modern yang menawarkan tingkat
+   keamanan tinggi dengan ukuran kunci yang lebih kecil, sehingga lebih efisien
+   untuk perangkat dengan sumber daya terbatas.
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
-
----
-
-## 6. Hasil dan Pembahasan
+## 6. Kesimpulan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
 - Berikan tabel atau ringkasan hasil uji jika diperlukan.  
 - Jelaskan apakah hasil sesuai ekspektasi.  
@@ -63,12 +75,29 @@ Hasil eksekusi program Caesar Cipher:
 
 ---
 
-## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
+## 7. Pertanyaan Diskusi
+1. Pembangkitan kunci berfungsi menghasilkan kunci rahasia yang unik, enkripsi
+   mengubah pesan asli (plaintext) menjadi bentuk tersandi (ciphertext), dan
+   dekripsi mengembalikan ciphertext menjadi plaintext menggunakan kunci yang
+   sesuai. Ketiga komponen ini bekerja bersama untuk menjaga kerahasiaan dan
+   keamanan data dalam sistem kriptografi.
+2. Apa kelebihan dan kelemahan sistem simetri dibandingkan asimetris?
+   Jawab : Kelebihan : 1. Proses enkripsi dan dekripsi lebih cepat dan efisien,
+   2. karena hanya menggunakan satu kunci dan algoritmanya relatif sederhana.
+   Kekurangan :1.  Menghadapi masalah dalam distribusi kunci, karena kunci harus
+   dikirimkan kepada penerima melalui jalur yang aman. 2. Jika kunci diketahui
+   oleh pihak lain, maka seluruh pesan dapat dibuka, sehingga keamanan sistem
+   menjadi lemah. 3. Tidak dapat digunakan untuk tanda tangan digital atau
+   autentikasi identitas secara langsung, berbeda dengan sistem asimetris.
+3. Mengapa distribusi kunci masalah menjadi utama dalam kriptografi simetri?
+   Jawab : Distribusi kunci menjadi masalah utama dalam kriptografi simetris
+   karena menggunakan satu kunci yang sama untuk enkripsi dan dekripsi. Jika
+   kunci bocor saat dikirim, pihak lain dapat membaca seluruh pesan, sehingga
+   keamanan sistem terancam.
+   
+   
+
+Cocok digunakan untuk mengamankan data dalam jumlah besar atau komunikasi yang membutuhkan kecepatan tinggi.
 
 ## 8. Kesimpulan
 (Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
