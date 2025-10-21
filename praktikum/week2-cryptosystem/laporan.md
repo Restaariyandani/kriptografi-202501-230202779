@@ -13,12 +13,38 @@ Mengidentifikasi komponen dasar kriptosistem (plaintext, ciphertext, kunci, algo
 ## 2. Dasar Teori
 Kriptosistem merupakan suatu sistem dalam kriptografi yang terdiri dari sekumpulan algoritma yang berfungsi untuk memberikan layanan keamanan, seperti menjaga kerahasiaan data melalui proses enkripsi dan dekripsi pesan. Secara umum, kriptosistem memiliki tiga komponen utama, yaitu algoritma untuk pembangkitan kunci, proses enkripsi, dan proses dekripsi. Tingkat keamanan sistem ini sangat ditentukan oleh seberapa aman kunci yang digunakan.
 ## 3. Kode Sumber
-(- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
+# file: praktikum/week2-cryptosystem/src/simple_crypto.py
 
----
+def encrypt(plaintext, key):
+    result = ""
+    for char in plaintext:
+        if char.isalpha():
+            shift = 65 if char.isupper() else 97
+            result += chr((ord(char) - shift + key) % 26 + shift)
+        else:
+            result += char
+    return result
+
+def decrypt(ciphertext, key):
+    result = ""
+    for char in ciphertext:
+        if char.isalpha():
+            shift = 65 if char.isupper() else 97
+            result += chr((ord(char) - shift - key) % 26 + shift)
+        else:
+            result += char
+    return result
+
+if __name__ == "__main__":
+    message = "Cryptosystem Test"
+    key = 5
+
+    enc = encrypt(message, key)
+    dec = decrypt(enc, key)
+
+    print("Plaintext :", message)
+    print("Ciphertext:", enc)
+    print("Decrypted :", dec)
 
 ## 4. Hasil dan Pembahasan
 (Tuliskan langkah yang dilakukan sesuai instruksi.  
