@@ -81,4 +81,4 @@ Contoh format:
    keamanan sistem terancam.
    
    
-
+![Hasil Eksekusi](screenshots/hasil_eksekusi.png)
