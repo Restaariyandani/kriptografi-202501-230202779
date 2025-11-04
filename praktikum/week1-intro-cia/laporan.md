@@ -10,7 +10,7 @@ Kpritrogafi klasik berkembang masa lampau dengan metode yang sangat sederhana ya
 Perkembangan kriptografi modern yang dimulai dengan munculnya algoritma yang lebih kompleks dan aman. Dua algoritma penting dalam periode ini adalah RSA dan AES. RSA sendiri merupakan algoritma asimetrisyang menggunakan pasangan kuci publik dan privat, sangat memungkinkan komunikasinya lebih aman dan tanda tangan digital, ini sangat penting untuk transaksi elektronik dan internet.
 Selanjutnya yaitu Evolusi kriptografi kontemporer ini menghadirkan teknolohi yang baru yang menggabungkan konsep keamanan dan transparansi, seprti blockchain dan cryptocurrency, blockchain ialah sistem yang mencatat tansaksi dalam rantai blok yang terenkripsi, lebih sulis diubah dari pada yang sebelumnya tanpa persetujuan banyak pihak. Teknologi ini menjadim dasar bagi crytocurrency seperti Bitcoin.
 
-![Setup GitHub](screenshots/repo_setup.png)
+![Setup GitHub](screenshots/repo_setupp.png)
 
 ## 2. Quis
 1. Claude Shannon
