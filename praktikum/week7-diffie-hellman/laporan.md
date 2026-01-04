@@ -1,41 +1,29 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 7  
+Topik: Diffie-Hellman Key Exchange  
+Nama: Resta Ariyandani
+NIM: 230202779  
+Kelas:5IKRA 
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
 
----
+1. Melakukan simulasi protokol Diffie-Hellman untuk pertukaran kunci publik.
+2. Menjelaskan mekanisme pertukaran kunci rahasia menggunakan bilangan prima dan      logaritma diskrit.
+3. Menganalisis potensi serangan pada protokol Diffie-Hellman (termasuk serangan      Man-in-the-Middle / MITM).
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
-
----
-
+Diffie–Hellman Key Exchange adalah metode yang digunakan untuk memungkinkan dua pihak berbagi kunci rahasia yang sama melalui jaringan terbuka tanpa harus mengirimkan kunci tersebut secara langsung. Metode ini memanfaatkan perhitungan matematika khusus sehingga meskipun proses pertukaran dapat dilihat oleh pihak lain, kunci rahasia yang dihasilkan tetap aman.
 ## 3. Alat dan Bahan
 (- Python 3.x  
 - Visual Studio Code / editor lain  
 - Git dan akun GitHub  
 - Library tambahan (misalnya pycryptodome, jika diperlukan)  )
 
----
 
-## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
-
----
-
-## 5. Source Code
+## 4. Source Code
 (Salin kode program utama yang dibuat atau dimodifikasi.  
 Gunakan blok kode:
 
@@ -48,7 +36,7 @@ def encrypt(text, key):
 
 ---
 
-## 6. Hasil dan Pembahasan
+## 5. Hasil dan Pembahasan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
 - Berikan tabel atau ringkasan hasil uji jika diperlukan.  
 - Jelaskan apakah hasil sesuai ekspektasi.  
@@ -63,25 +51,16 @@ Hasil eksekusi program Caesar Cipher:
 
 ---
 
-## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
-
-## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
-
----
-
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
-
----
+## 6. Jawaban Pertanyaan
+1. Mengapa Diffie-Hellman memungkinkan pertukaran kunci di saluran publik?
+   Jawab :
+   Diffie-Hellman memungkinkan dua pihak membentuk kunci rahasia yang sama tanpa      harus mengirimkan kunci tersebut secara langsung melalui jaringan. Informasi       yang dikirimkan secara terbuka hanyalah parameter umum seperti bilangan publik     dan nilai hasil perhitungan masing-masing pihak. Meskipun nilai-nilai tersebut     dapat diketahui oleh pihak lain, kunci rahasia tetap tidak dapat diperoleh         karena untuk menentukannya diperlukan penyelesaian masalah logaritma diskret,      yang sangat sulit diselesaikan secara matematis.
+2. Apa kelemahan utama protokol Diffie-Hellman murni?
+   Jawab :
+   Kelemahan utama dari Diffie-Hellman murni terletak pada tidak adanya proses        verifikasi identitas. Hal ini membuatnya mudah disusupi oleh serangan man-in-      the-middle, di mana pihak lain dapat berpura-pura menjadi lawan komunikasi dan     membentuk kunci rahasia tanpa diketahui oleh kedua pihak yang sebenarnya.
+3. Bagaimana cara mencegah serangan MITM pada protokol ini?
+   Jawab :
+   Serangan Man-in-the-Middle (MITM) pada protokol Diffie-Hellman dapat dicegah       dengan menambahkan mekanisme autentikasi. Salah satu caranya adalah                menggabungkan Diffie-Hellman dengan sertifikat digital atau tanda tangan           digital, sehingga identitas masing-masing pihak dapat diverifikasi. Selain itu,    penggunaan protokol keamanan seperti TLS/SSL juga efektif karena menyediakan       proses pertukaran kunci yang aman sekaligus terautentikasi, sehingga mencegah      pihak ketiga menyusup ke dalam komunikasi.
 
 ## 10. Commit Log
 (Tuliskan bukti commit Git yang relevan.  
