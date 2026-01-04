@@ -1,22 +1,21 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-:11  
+Topik:Secret Sharing (Shamir’s Secret Sharing)  
+Nama: Resta Ariyandani 
+NIM: 230202779  
+Kelas:5IKRA 
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
 
----
+1. Menjelaskan konsep Shamir Secret Sharing (SSS).
+2. Melakukan simulasi pembagian rahasia ke beberapa pihak menggunakan skema SSS.
+4. Menganalisis keamanan skema distribusi rahasia.
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
-
----
+Shamir Secret Sharing (SSS) merupakan sebuah teknik kriptografi yang berfungsi untuk membagi sebuah rahasia menjadi beberapa bagian sehingga setiap bagian saja tidak cukup untuk mengungkap rahasia tersebut. Rahasia hanya bisa dipulihkan jika sejumlah bagian tertentu, yang disebut threshold, dikumpulkan. Metode ini ditemukan oleh Adi Shamir pada tahun 1979 dan memanfaatkan polinomial dengan derajat tertentu, di mana rahasia asli ditempatkan sebagai koefisien konstanta. Setiap bagian atau share mewakili titik pada polinomial, dan minimal jumlah share sesuai threshold diperlukan untuk melakukan interpolasi polinomial agar rahasia asli bisa diperoleh kembali. Dengan pendekatan ini, Shamir Secret Sharing memungkinkan penyimpanan atau distribusi rahasia secara aman, karena jika jumlah share yang tersedia kurang dari threshold, rahasia tetap tidak dapat diakses. Teknik ini banyak diterapkan dalam manajemen kunci, sistem backup aman, dan berbagai aplikasi kriptografi.
 
 ## 3. Alat dan Bahan
 (- Python 3.x  
@@ -26,16 +25,8 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 
 ---
 
-## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
 
----
-
-## 5. Source Code
+## 6. Source Code
 (Salin kode program utama yang dibuat atau dimodifikasi.  
 Gunakan blok kode:
 
@@ -48,7 +39,7 @@ def encrypt(text, key):
 
 ---
 
-## 6. Hasil dan Pembahasan
+## 7. Hasil dan Pembahasan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
 - Berikan tabel atau ringkasan hasil uji jika diperlukan.  
 - Jelaskan apakah hasil sesuai ekspektasi.  
@@ -63,23 +54,16 @@ Hasil eksekusi program Caesar Cipher:
 
 ---
 
-## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
-
-## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
-
----
-
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+## 8. Jawaban Pertanyaan
+1. Apa keuntungan utama Shamir Secret Sharing dibanding membagikan salinan kunci      secara langsung?
+   Jawab :
+   Keuntungan utama Shamir Secret Sharing dibanding membagikan salinan kunci          langsung adalah keamanannya. Setiap bagian saja tidak bisa mengungkap rahasia,     sehingga kehilangan atau bocornya sebagian share tidak membahayakan. Rahasia       hanya bisa dipulihkan jika sejumlah share sesuai threshold digabung, sekaligus     memberi kontrol dan fleksibilitas lebih dibanding pembagian kunci langsung.
+2. Apa peran threshold (k) dalam keamanan secret sharing?
+   Jawab :
+   Dalam secret sharing, threshold (k) menunjukkan jumlah minimal share yang harus    digabungkan untuk mendapatkan rahasia asli. Threshold berperan penting dalam       keamanan karena menghalangi pihak yang memiliki share kurang dari k untuk          mengakses rahasia. Semakin besar nilai k, semakin sulit rahasia disalahgunakan,    sehingga threshold bertindak sebagai pengatur keamanan agar hanya pihak yang       cukup banyak yang bisa memulihkan rahasia.
+3. Berikan satu contoh skenario nyata di mana SSS sangat bermanfaat.
+   Jawab :
+   Contoh nyata penggunaan Shamir Secret Sharing (SSS) adalah dalam pengelolaan       kunci perusahaan atau cryptocurrency. Misalnya, sebuah perusahaan memiliki         kunci privat dompet cryptocurrency yang sangat penting. Alih-alih menyimpan        kunci secara utuh yang berisiko dicuri atau hilang, kunci tersebut dibagi          menjadi beberapa bagian menggunakan SSS, misalnya 5 share dengan threshold 3.      Artinya, minimal 3 dari 5 eksekutif harus bekerja sama untuk mengakses kunci       dan melakukan transaksi. Dengan begitu, jika satu atau dua share hilang atau       dicuri, rahasia tetap aman, sehingga risiko kehilangan aset atau kebocoran         kunci dapat diminimalkan.
 
 ---
 
