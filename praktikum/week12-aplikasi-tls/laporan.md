@@ -1,21 +1,21 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 12  
+Topik: Aplikasi TLS & E-commerce
+Nama: Resta Ariyandani 
+NIM: 230202779  
+Kelas: 5IKRA  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
 
----
+1. Menganalisis penggunaan kriptografi pada email dan SSL/TLS.
+2. Menjelaskan enkripsi dalam transaksi e-commerce.
+3. Mengevaluasi isu etika & privasi dalam penggunaan kriptografi di kehidupan         sehari-hari.
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
-
+Transport Layer Security (TLS) adalah protokol yang berfungsi untuk mengamankan komunikasi di internet. TLS menjaga agar data yang dikirim antara pengguna (misalnya browser) dan server tetap rahasia, utuh, dan terverifikasi, sehingga pihak ketiga tidak dapat membaca atau mengubah informasi tersebut. Protokol ini umum digunakan pada layanan seperti HTTPS, email, dan berbagai aplikasi online. TLS bekerja dengan cara mengenkripsi data, memverifikasi identitas server (dan kadang klien) melalui sertifikat digital, serta memastikan integritas data selama pengiriman, sehingga transaksi online dan pertukaran informasi sensitif menjadi lebih aman.
 ---
 
 ## 3. Alat dan Bahan
@@ -26,16 +26,7 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 
 ---
 
-## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
-
----
-
-## 5. Source Code
+## 4. Source Code
 (Salin kode program utama yang dibuat atau dimodifikasi.  
 Gunakan blok kode:
 
@@ -48,7 +39,7 @@ def encrypt(text, key):
 
 ---
 
-## 6. Hasil dan Pembahasan
+## 5. Hasil dan Pembahasan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
 - Berikan tabel atau ringkasan hasil uji jika diperlukan.  
 - Jelaskan apakah hasil sesuai ekspektasi.  
@@ -63,26 +54,16 @@ Hasil eksekusi program Caesar Cipher:
 
 ---
 
-## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
-
-## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
-
----
-
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
-
----
-
+## 6. Jawaban Pertanyaan
+1. Apa perbedaan utama antara HTTP dan HTTPS?
+   Jawab :
+   Perbedaan utama antara HTTP dan HTTPS terletak pada tingkat keamanan saat data     dikirimkan. HTTP mengirimkan informasi antara browser dan server tanpa             enkripsi, sehingga data sensitif seperti kata sandi bisa disadap atau diubah       oleh pihak ketiga. Sebaliknya, HTTPS menggunakan TLS/SSL untuk mengenkripsi        data, sehingga komunikasi tetap rahasia, utuh, dan terverifikasi. Dengan           demikian, HTTPS memungkinkan pengguna mengakses situs dan mentransfer informasi    dengan keamanan yang lebih tinggi dibanding HTTP.
+2. Mengapa sertifikat digital menjadi penting dalam komunikasi TLS?
+   Jawab :
+   Sertifikat digital penting dalam komunikasi TLS karena berfungsi untuk             memverifikasi identitas server atau pihak yang terhubung dan mendukung             terciptanya koneksi yang aman. Dengan adanya sertifikat, browser atau klien        dapat memastikan bahwa server yang diakses benar-benar sah, sehingga mengurangi    risiko serangan man-in-the-middle (MITM). Selain itu, sertifikat juga              menyediakan kunci publik untuk mengenkripsi data, sehingga informasi yang          dikirim tetap rahasia dan tidak dapat diubah selama pengiriman. Singkatnya,        sertifikat digital menjadi pondasi keamanan TLS yang menjamin autentikasi dan      integritas komunikasi.
+3. Bagaimana kriptografi mendukung privasi dalam komunikasi digital, tetapi           sekaligus menimbulkan tantangan hukum dan etika?
+   Jawab :
+   Kriptografi melindungi privasi komunikasi digital dengan mengenkripsi data,        sehingga hanya pihak berwenang yang dapat mengaksesnya. Namun, enkripsi kuat       juga bisa menyulitkan penegak hukum dan kadang disalahgunakan untuk aktivitas      ilegal, menimbulkan dilema antara privasi individu dan keamanan publik.
 ## 10. Commit Log
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
