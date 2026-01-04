@@ -16,6 +16,7 @@ Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:
 
 ## 2. Dasar Teori
 Transport Layer Security (TLS) adalah protokol yang berfungsi untuk mengamankan komunikasi di internet. TLS menjaga agar data yang dikirim antara pengguna (misalnya browser) dan server tetap rahasia, utuh, dan terverifikasi, sehingga pihak ketiga tidak dapat membaca atau mengubah informasi tersebut. Protokol ini umum digunakan pada layanan seperti HTTPS, email, dan berbagai aplikasi online. TLS bekerja dengan cara mengenkripsi data, memverifikasi identitas server (dan kadang klien) melalui sertifikat digital, serta memastikan integritas data selama pengiriman, sehingga transaksi online dan pertukaran informasi sensitif menjadi lebih aman.
+
 ---
 
 ## 3. Alat dan Bahan
