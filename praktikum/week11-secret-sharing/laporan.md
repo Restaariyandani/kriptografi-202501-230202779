@@ -27,17 +27,37 @@ Shamir Secret Sharing (SSS) merupakan sebuah teknik kriptografi yang berfungsi u
 
 
 ## 6. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+from secrets import randbelow
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
+P = 208351617316091241234326746312124448251235562226470491514186331217050270460481
 
----
+def split_secret(secret, k, n):
+    secret = int.from_bytes(secret.encode(), 'big')
+    coeffs = [secret] + [randbelow(P) for _ in range(k - 1)]
+    shares = []
+    for i in range(1, n + 1):
+        y = sum(coeffs[j] * pow(i, j, P) for j in range(k)) % P
+        shares.append((i, y))
+    return shares
+
+def recover_secret(shares):
+    secret = 0
+    for j, (xj, yj) in enumerate(shares):
+        prod = 1
+        for m, (xm, _) in enumerate(shares):
+            if m != j:
+                prod *= xm * pow(xm - xj, -1, P)
+                prod %= P
+        secret += yj * prod
+        secret %= P
+    return secret
+
+secret = "KriptografiUPB2025"
+shares = split_secret(secret, 3, 5)
+print("Shares:", shares)
+
+recovered = recover_secret(shares[:3])
+print("Recovered secret:", recovered.to_bytes((recovered.bit_length()+7)//8,'big').decode())
 
 ## 7. Hasil dan Pembahasan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
@@ -47,10 +67,7 @@ def encrypt(text, key):
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+![Hasil Eksekusi](screenshots/kriptoweek11.png)
 
 ---
 
