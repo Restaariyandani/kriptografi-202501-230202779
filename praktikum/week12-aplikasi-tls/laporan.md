@@ -19,41 +19,20 @@ Transport Layer Security (TLS) adalah protokol yang berfungsi untuk mengamankan 
 
 ---
 
-## 3. Alat dan Bahan
-(- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
+## 3. Hasil dan Pembahasan
+langkah 1 : Website Shopee:
+1. Menggunakan HTTPS (TLS aktif)
+2. Sertifikat valid dan masih berlaku
+3. Diterbitkan oleh CA terpercaya
+4. Menggunakan algoritma kriptografi kuat (SHA-256, TLS0
+Langkah 2 Bagaimana enkripsi digunakan untuk melindungi transaksi online?
+1. Pada aktivitas daring seperti proses masuk akun dan transaksi pembayaran, mekanisme TLS berperan menjaga kerahasiaan data dengan mengamankan jalur komunikasi antara peramban pengguuna dan server e-commerce. Pada saat autentikasi, kredensial berupa nama pengguna dan kata sandi dikodekan menggunakan kunci sesi simetris (contohnya AES) yang dihasilkan melalui tahapan TLS handshake. Sementara itu, pada fase pembayaran, informasi penting seperti nomor kartu, kode keamanan (CVV), serta rincian transaksi juga disandikan, sehingga hanya server yang dituju mampu menguraikannya, sedangkan pihak lain di dalam jaringan tidak dapat mengakses atau memahami data tersebut.
 
----
+Potensi ancaman jika TLS tidak digunakan
+1. Apabila TLS tidak digunakan, infromasi dikirimkan dalam fromat terbuka yang mudah dibaca, sehingga tingkat keamnanannya sangat rendah. Salah satu reiko terbesar adalah serangan Man-in-the-Middle (MITM), yaitu kondisi ketika [ihak tidak berwenang dapat mencegat, memodifikasi, atau mengambil data pengguna salama proses pengiriman. Selain itu, potensi ancaman lain mencangkup pengambil alihan akun, manipulasi transaksi, serta terbukanya informasi keuangan, yang pada akhirnya merugikan pengguna dan mengikis kepercayaan terhadap layanan e-commerce.
 
-## 4. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
-
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
-
----
-
-## 5. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
-
-Hasil eksekusi program Caesar Cipher:
-
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
-
----
+Langkah 3 Identifikasi isu privasi dalam penggunaan email terenkripsi (PGP, S/MIME
+1. Teknologi ini menjaga kerahasiaan konten pesan, tetapi persoalan privasi tetap muncul terkait pengelolaan kunci serta keterbukaan metadata email yang masih bisa dianalisis. Dari sudut pandang etis, perusahaan hanya boleh mengakses dan membuka email karyawan untuk keperluan audit apabila dilakukan secara terbatas, terbuka, dan sesuai dengan kebijakan resmi, sehingga tidak melanggar hak privasi. Di sisi lain, pengawasan oleh pemerintah terhadap komunikasi yang dienkripsi perlu menyeimbangkan aspek keamanan dan perlindungan privasi melalui aturan yang jelas serta izin hukum yang sah, tanpa merusak kekuatan sistem enkripsi itu sendiri.
 
 ## 6. Jawaban Pertanyaan
 1. Apa perbedaan utama antara HTTP dan HTTPS?
@@ -65,13 +44,3 @@ Hasil eksekusi program Caesar Cipher:
 3. Bagaimana kriptografi mendukung privasi dalam komunikasi digital, tetapi           sekaligus menimbulkan tantangan hukum dan etika?
    Jawab :
    Kriptografi melindungi privasi komunikasi digital dengan mengenkripsi data,        sehingga hanya pihak berwenang yang dapat mengaksesnya. Namun, enkripsi kuat       juga bisa menyulitkan penegak hukum dan kadang disalahgunakan untuk aktivitas      ilegal, menimbulkan dilema antara privasi individu dan keamanan publik.
-## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
-
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
-```
