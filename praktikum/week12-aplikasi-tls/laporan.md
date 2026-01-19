@@ -33,6 +33,7 @@ Potensi ancaman jika TLS tidak digunakan
 
 Langkah 3 Identifikasi isu privasi dalam penggunaan email terenkripsi (PGP, S/MIME
 1. Teknologi ini menjaga kerahasiaan konten pesan, tetapi persoalan privasi tetap muncul terkait pengelolaan kunci serta keterbukaan metadata email yang masih bisa dianalisis. Dari sudut pandang etis, perusahaan hanya boleh mengakses dan membuka email karyawan untuk keperluan audit apabila dilakukan secara terbatas, terbuka, dan sesuai dengan kebijakan resmi, sehingga tidak melanggar hak privasi. Di sisi lain, pengawasan oleh pemerintah terhadap komunikasi yang dienkripsi perlu menyeimbangkan aspek keamanan dan perlindungan privasi melalui aturan yang jelas serta izin hukum yang sah, tanpa merusak kekuatan sistem enkripsi itu sendiri.
+   ![Hasil Eksekusi](screenshots/kriptoweek12.png)
 
 ## 6. Jawaban Pertanyaan
 1. Apa perbedaan utama antara HTTP dan HTTPS?
