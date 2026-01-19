@@ -54,6 +54,7 @@ class Block:
             self.nonce += 1
             self.hash = self.calculate_hash()
         print(f"Block mined: {self.hash}")
+        
 class Blockchain:
     def __init__(self):
         self.chain = [self.create_genesis_block()]
