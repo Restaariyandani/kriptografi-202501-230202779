@@ -81,47 +81,34 @@ my_chain.add_block(Block(2, "", "Transaksi B → C: 5 Coin"))
     
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.  
-- Jelaskan apakah hasil sesuai ekspektasi.  
-- Bahas error (jika ada) dan solusinya. 
+Hasil uji coba proses penambangan pada TinyChain memperlihatkan bahwa durasi penambangan tidak bersifat konstan, melainkan dipengaruhi langsung oleh tingkat kesulitan yang digunakan. Ketika parameter kesulitan berada pada level rendah, sistem dapat dengan cepat menemukan nilai acak (nonce) yang menghasilkan pola hash sesuai ketentuan. Namun, saat ambang kesulitan dinalikkan, jumlah percobaan yang harus dilakukan meningkat drastis, sehingga waktu yang dibutuhkan untuk menyelesaikan proses tersebut menjadi jaluh lebih panjang.
+Temuan ini menegakan adanya hubungan searah antara besarnya nilai difficulty dan lamanya proses mining. Semakin ketat persyaratan hash yang ditetapkan, semakin kecil peluang sistem memperoleh hasil yang valid dalam setiap percobaan, sehingga durasi komputasi pun bertambah.
+Pola kerja ini berperan sebagain lapisan bagi blockchain, karena pihak yang berniat merusak atau mengubah data harus menge;uarkan daya komputasi serta waktu yang sangat besar, Akibatnya, upaya seperti pemalsuan transaksi atau pengeluaran ganda menjadi tidak ekonomis, sekaligus mempertahankan keandalan dan keutuhan data dalam jaringan blockchain.
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+![Hasil Eksekusi](screenshots/kriptoweek13.png)
 
----
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
----
-
-## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
-
----
-
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
-
----
+1. Mengapa fungsi hash sangat penting dalam blockchain?
+   jawab:
+   Fungsi hash berperan penting dalam blockchain karena digunakan untuk menjaga      keaslian dan keterkaitan data antarblok. Setiap perubahan kecil pada isi blok     akan menghasilkan nilai hash yang berbeda, sehingga manipulasi dapat dengan       mudah terdeteksi. Selain itu, hash juga dimanfaatkan dalam proses pembuatan       blok baru agar tidak bisa dilakukan secara sembarangan, sehingga sistem tetap     aman dan dapat dipercaya.
+2. Bagaimana Proof of Work mencegah double spending?
+   jawab:
+   Proof of Work mencegah double spending dengan memastikan setiap transaksi         harus melewati proses perhitungan yang memakan waktu sebelum bisa dicatat         dalam blockchain. Setelah sebuah blok ditambahkan dan terhubung dengan blok       sebelumnya, data di dalamnya menjadi sulit diubah. Jika ada yang mencoba          memakai koin yang sama dua kali, ia harus menghitung ulang seluruh blok           berikutnya untuk menyaingi rantai yang sudah diakui jaringan, yang membutuhkan    sumber daya sangat besar.
+3. Apa kelemahan dari PoW dalam hal efisiensi energi?
+   jawab:
+   Kelemahan utama Proof of Work dalam hal efisiensi energi adalah kebutuhan daya    listrik yang sangat besar karena proses penambangan mengharuskan banyak           perangkat melakukan perhitungan berulang-ulang untuk menemukan hash yang          sesuai. Sebagian besar upaya komputasi tersebut tidak menghasilkan blok baru,     sehingga energi yang digunakan sering kali terbuang. Akibatnya, PoW dinilai       kurang ramah lingkungan dan memiliki biaya operasional yang tinggi                dibandingkan dengan mekanisme konsensus lain.
+  
 
 ## 10. Commit Log
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+commit 
+Author: Resta <restaariandani@gmail.com>
+Date:   2026-01-19
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
 ```
